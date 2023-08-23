@@ -1,4 +1,4 @@
-<% @title = "Contact us" %>
+﻿<% @title = "Stopite v kontakt z nami" %>
 
 <%= foi_error_messages_for :contact %>
 
@@ -7,35 +7,30 @@
 <div id="contact_preamble" class="contact_preamble">
 
   <% if !flash[:notice] %>
-    <h2>Contact an authority to get official information</h2>
+    <h2>Stopite v stik z organom, da prejmete uradne informacije</h2>
     <ul>
-      <li><a href="<%= new_request_path %>">Go here</a> to make a request, in public, for information
-        from public authorities.</li>
+      <li><a href="<%= new_request_path %>">Tukaj</a> ustvarite zahtevo za informacije javnega značaja, ki jih hranijo javni organi.</li>
 
       <li>
-        Asking for private information about yourself?
-        Please read our
-        <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">help page</a>.
+        Zahtevate zasebne informacije o sebi? Prosimo, preberite našo stran za <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">pomoč</a>.
       </li>
     </ul>
 
   <% end %>
 
-  <h2>Contact the <%= site_name %> team</h2>
+  <h2>Stopite v stik z <%= site_name %>ekipo</h2>
   <% if !flash[:notice] %>
     <ul>
       <li>
-        Please read the  <a href="<%= help_about_path %>">help page</a> first, as it may
-        answer your question quicker.
+        Prosimo, da najprej preberete zavihek <a href="<%= help_about_path %>">pomoč</a>, ker lahko dobite odgovore na svoja vprašanja hitreje.
       </li>
 
-      <li>We'd love to hear how you've found using this site.
-        Either fill in this form, or send an email to <a
+      <li>Z veseljem bi izvedeli, kako uporabljate našo stran.
+        Lahko izpolnite ta obrazec, ali pa pošljete e-poštno sporočilo na <a
                             href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
       </li>
 
-      <li>We are a <strong>charity</strong> and not part of the
-        Government.</li>
+      <li>Smo <strong>neprofitna organizacija</strong> in nismo del vlade.</li>
     </ul>
   <% end %>
 </div>
@@ -44,24 +39,24 @@
 
   <% if not @user %>
     <p>
-      <label class="form_label" for="contact_name">Your name:</label>
+      <label class="form_label" for="contact_name">Vaše ime:</label>
       <%= f.text_field :name, :size => 20 %>
       (or <%= link_to "sign in", signin_path(:r => request.fullpath) %>)
     </p>
 
     <p>
-      <label class="form_label" for="contact_email">Your email:</label>
+      <label class="form_label" for="contact_email">Vaša e-naslov:</label>
       <%= f.text_field :email, :size => 20 %>
     </p>
   <% end %>
 
   <p>
-    <label class="form_label" for="contact_subject">Subject:</label>
+    <label class="form_label" for="contact_subject">Zadeva:</label>
     <%= f.text_field :subject, :size => 50 %>
   </p>
 
   <p>
-    <label class="form_label" for="contact_message">Message to website:</label>
+    <label class="form_label" for="contact_message">Sporočilo spletni strani:</label>
     <%= f.text_area :message, :rows => 10, :cols => 60 %>
   </p>
 
@@ -72,29 +67,28 @@
 
   <% if !@last_request.nil? %>
     <p>
-      <label class="form_label" for="contact_message">Include link to request:</label>
+      <label class="form_label" for="contact_message">Vstavite povezavo do zahteve:</label>
       <%=request_link(@last_request) %>
       <%= submit_tag "remove", :name => 'remove' %>
     </p>
   <% end %>
   <% if !@last_body.nil? %>
     <p>
-      <label class="form_label" for="contact_message">Include link to authority:</label>
+      <label class="form_label" for="contact_message">Vstavite povezavo do javnega organa:</label>
       <%=public_body_link(@last_body) %>
       <%= submit_tag "remove", :name => 'remove' %>
     </p>
   <% end %>
 
   <p class="form_note">
-    We can only help you with <strong>technical problems</strong>, or questions
-    about Freedom of Information.
+    Pomagamo vam lahko le s <strong>tehničnimi težavami</strong> ali vprašanji, ki se nanašajo na  ZDIJZ.
   </p>
 
 
   <div class="form_button">
     <%= hidden_field_tag(:submitted_contact_form, 1) %>
     <%= submit_tag "Send message to the charity", :data => { :disable_with => "Sending..." } %>
-    &lt;-- we run this site, not the Government!
+    &lt;-- to stran vodimo mi, ne vlada!
   </div>
 
 <% end %>

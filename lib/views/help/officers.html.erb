@@ -1,4 +1,4 @@
-<% @title = "FOI officer questions" %>
+﻿<% @title = "Pooblaščene osebe za posredovanje IJZ" %>
 
 <%= render :partial => 'sidebar' %>
 
@@ -7,202 +7,122 @@
 
   <dl>
 
-    <dt id="top">I just got here from bottom of an FOI request, what is going on? <a href="#top">#</a> </dt>
+    <dt id="top">Z dna zahteve za informacije sem prišel sem, kaj se dogaja?<a href="#top">#</a> </dt>
 
-    <dd><p><%= site_name %> is a service run by a charity. It helps ordinary members
-        of the public make FOI requests, and easily track and share the responses.</p>
+    <dd><p><%= site_name %> je javna storitev. Ljudem pomaga objavljati zahteve za dostop do informacij javnega značaja, nato pa slediti odgovorom in jih tudi deliti naprej.</p>
 
-      <p>The FOI request you received was made by someone using <%= site_name %>. You can
-        simply reply to the request as you would any other request from an individual.
-        The only difference is that your response will be automatically published on
-        the Internet.
-      </p>
-      <p>If you have privacy or other concerns, please read the answers below.
-        You might also like to read the <a
-        href="<%= help_about_path %>">introduction to <%= site_name %></a> to find out more about what
-        the site does from the point of view of a user. You can also search the
-        site to find the authority that you work for, and view the status of
-        any requests made using the site.
-
-      <p>Finally, we welcome comments and
-        thoughts from FOI officers, please <a href="<%= help_contact_path %>">get in touch</a>.
+      <p>Zahtevo, ki ste jo prejeli, je nekdo ustvaril s pomočjo platforme <%= site_name %>. Na zahtevo lahko preprosto odgovorite, kot bi odgovorili na katero koli drugo. Edina razlika je v tem, da bo vaš odgovor zdaj avtomatsko objavljen na spletu.
+    </p>
+      <p>Če imate skrbi glede zasebnosti, si preberite odgovore spodaj. Morda boste želeli prebrati tudi <a
+        href="<%= help_about_path %>">O projektu <%= site_name %></a>, da boste bolje razumeli, kako stran deluje z vidika uporabnika. Lahko preiščete tudi zahteve, ki jih je že prejela vaša organizacija, in preverite njihov status. <p>Veseli smo komentarjev pooblaščenih oseb, ki odgovarjajo na zahteve po ZDIJZ. Lahko <a href="<%= help_contact_path %>">nas kontaktirate</a>.
       </p>
     </dd>
 
-    <dt id="responses">Why are you publishing responses to FOI requests? <a href="#responses">#</a> </dt>
+    <dt id="responses">Zakaj objavljate odzive na zahteve? <a href="#responses">#</a> </dt>
 
-    <dd>We think there are lots of benefits. Most importantly it will encourage the
-      public to be more interested and involved in the work of government. We
-      also hope that it will reduce the number of duplicate requests on any
-      subject that a public body will receive. Given that Freedom of Information
-      responses contain public information, which anybody could easily request
-      again from the public authority, we think there should be no reason not to
-      publish it widely.
-    </dd>
+    <dd>V tem vidimo veliko prednosti. Predvsem bo to vzpodbudilo javnost, da se bo bolj vključevala v delo vlade. Upamo tudi, da bodo zaradi tega organi na določeno tematiko prejeli manj podvojenih zahtev. Glede na to, da gre za javne podatke, ki bi jih lahko od javnega organa zahteval kdor koli, ni razloga, da jih ne bi javno objavili. </dd>
 
-    <dt id="realpeople">Are the people making requests real people? <a href="#realpeople">#</a> </dt>
+    <dt id="realpeople">Ali zahteve oddajajo resnični ljudje? <a href="#realpeople">#</a> </dt>
 
-    <dd>Yes. For the purposes of keeping track of responses we use
-      computer-generated email addresses for each request. However, before
-      they can send a request, each user must register on the site with a
-      unique email address that we then verify. You can search this site and
-      find a page listing all requests that each person has made.
-    </dd>
+    <dd>Da. Z namenom beleženja odzivov za vsako zahtevo uporabljamo strojno generirane e-poštne naslove. Preden uporabnik poda zahtevo, se mora registrirati z unikatnim e-poštnim naslovom, ki ga potem preverimo. Na strani lahko najdete seznam vseh zahtev, ki jih je oddal določen uporabnik.    </dd>
 
-    <dt id="email_only">An email isn't a sufficient address for an FOI request! <a href="#email_only">#</a> </dt>
+    <dt id="email_only">E-poštni naslov ni dovolj za dostop do informacij javnega značaja!<a href="#email_only">#</a> </dt>
 
-    <dd>Yes it is. In the UK, this
-      <a href="https://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives guidance on the matter, specifically
-      in the context of requests made via WhatDoTheyKnow, a similar site to <%= site_name %>.
-    </dd>
+    <dd>Je. Zahteva mora vsebovati navedbo organa, kateremu se pošilja, osebno ime, firmo ali ime pravne osebe, navedbo o morebitnem zastopniku ali pooblaščencu ter naslov prosilca oziroma njegovega zastopnika ali pooblaščenca. Naslov je lahko tudi e-poštni, res pa lahko v določenih primerih organ zahteva tudi vaš fizični naslov. Brez fizičnega naslova vam organ npr. ne more priporočeno poslati odločbe. </dd>
+ 
+    <dt id="vexatious">Ali morda pošiljate preveč vsiljivih zahtev? <a href="#vexatious">#</a> </dt>
 
-    <dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
-
-    <dd><p><%= site_name %> is not making any requests. We are sending requests on
-        behalf of our users, who are real people making the requests. </p>
-      <p>Look at it like this - if lots of different people made requests from
-        different Hotmail email addresses, then you would not think that Microsoft were
-        making vexatious requests. It is exactly the same if lots of requests are made
-        via <%= site_name %>. Moreover, since all requests are public it is much easier
-        for you to see if one of our users is making vexatious requests. </p>
+    <dd><p><%= site_name %> ne ustvarja nobenih zahtev. Zahteve posredujemo v imenu uporabnikov, ki so jih ustvarili.</p>
+      <p>Če bi veliko ljudi ustvarilo zahteve z različnimi Hotmail e-naslovi, verjetno ne bi mislili, da zahteve zlonamerno pošilja Microsoft. Enako je tudi tu, kjer zahteve ustvarjajo uporabniki platforme <%= site_name %>. Ker so vse zahteve javne, je tudi lažje videti, če kdo ustvarja vsiljive zahteve.</p>
 
     </dd>
 
-    <dt id="spam_problems">I can see a request on <%= site_name %>, but we never got it by email!<a href="#spam_problems">#</a> </dt>
+    <dt id="spam_problems">Zahtevo lahko vidimo na platformi <%= site_name %>, e-pošte pa nismo prejeli!<a href="#spam_problems">#</a> </dt>
 
-    <dd><p>If a request appears on the site, then we have attempted to send it to
-        the authority by email. Any delivery failure messages will automatically
-        appear on the site. You can check the address we're using with the "View FOI
-        email address" link which appears on the page for the authority. <a
-        href="<%= help_contact_path %>">Contact us</a> if there is a better address we can
-        use.</p>
-      <p>Requests are sometimes not delivered because they are quietly removed by
-        "spam filters" in the IT department of the authority. Authorities can make
-        sure this doesn't happen by asking their IT departments to "whitelist"
-        any email from <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
-        If you <a href="<%= help_contact_path %>">ask us</a> we will resend any request,
-        and/or give technical details of delivery so an IT department can chase
-        up what happened to the message.
+    <dd><p>Če je zahteva objavljena na strani, smo o njej skušali organ obvestiti po e-pošti. Vsako obvestilo o nezmožnosti dostave e-pošte se bo avtomatsko pojavilo na strani. Uporabljeni e-naslov lahko vidite s klikom na gumb "Preglejte e-poštni naslov za zahtevke za IJZ", ki se pojavi na strani organa. <a
+        href="<%= help_contact_path %>">Kontaktirajte nas</a> če menite, da bi morali uporabiti drug e-naslov.</p>
+      <p>Zahteve včasih niso dostavljene, ker jih avtomatsko odstranijo filtri za nezaželeno pošto pri IT-oddelkih organov. Organi lahko poskrbijo, da se to ne zgodi, tako da svoje IT-oddelke obvestijo, naj na t.i. beli seznam uvrstijo vso pošto platforme <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
+       Lahko nas <a href="<%= help_contact_path %>">kontaktirate</a>, da bomo vašo zahtevo znova poslali in IT-oddelku organov posredovali tehnične podatke o dostavi.
       </p>
-      <p>Finally, you can respond to any request from your web browser, without
-        needing any email, using the "respond to request" link at the bottom of
-        each request page.
+      <p>Na vsako zahtevo se lahko odzovete tudi neposredno iz brskalnika, brez potrebe po uporabi e-pošte. To lahko storite s klikom na gumb za odziv na dnu strani z zahtevo.
       </p>
     </dd>
 
-    <dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
+    <dt id="days">Kako je določen rok, ki je prikazan ob zahtevi?<a href="#days">#</a> </dt>
 
     <dd>
 
-      <p>The Freedom of Information Act says:</p>
+      <p>Zakon o dostopu do informacij javnega značaja pravi:</p>
 
-      <blockquote><p>A public authority must comply with section 1(1) <strong>promptly</strong> and
-      in any event not later than the twentieth working day following the date of
-      receipt.</p></blockquote>
+      <blockquote><p>Organ je dolžan odločiti o zahtevi prosilca <strong>nemudoma</strong>, najkasneje pa v roku 20 delovnih dni od dneva prejema popolne zahteve.</p></blockquote>
 
-      <p>The nerdy detail of exactly how weekends are counted, and what happens if
-        the request arrives out of office hours, is just that - detail. What matters
-        here is that the law says authorities must respond <strong>promptly</strong>.</p>
+      <p>Podrobnosti o štetju delovni dni ali pa o prejemu zahtev izven delovnih ur lahko ostanejo le podrobnosti. Važno je, da se morajo organi odzvati <strong>nemudoma</strong>.</p>
 
-      <p>If you've got a good reason why the request is going to take a while to
-        process, requesters find it really helpful if you can send a quick email with a
-        sentence or two saying what is happening. </p>
+      <p>Če imate dober razlog in bo pri določeni zahtevi odziv daljši, bodo prosilci hvaležni za kratko e-poštno sporočilo z obrazložitvijo situacije. </p>
 
-      <p>FOI officers often have to do a lot of <strong>hard work</strong> to answer
-        requests, and this is hidden from the public. We think it would help everyone
-        to have more of that complexity visible.</p>
+      <p>Uradniki morajo pogosto opraviti precej <strong>trdega dela</strong>, da odgovorijo na zahteve. Menimo, da bi vsem koristilo, če bi bil ta proces bolj viden javnosti.</p>
 
     </dd>
 
-    <dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
+    <dt id="days2">Ampak zares, kako izračunate rok?<a href="#days2">#</a> </dt>
 
     <dd>
 
-      <p>Please read the answer to the previous question first. Legally, authorities
-        must respond <strong>promptly</strong> to FOI requests. If they fail to do that,
-        it is best if they show the hard work they are doing by explaining what is
-        taking the extra time to do.
-      </p>
+      <p>Prosimo, da najprej preberete odgovor na prejšnje vprašanje. Zakonsko je določeno, da se morajo organi na zahteve za IJZ odzvati <strong>nemudoma</strong>. Če jim to ne uspe,je najbolje, da svoje trdo delo jasno prikažejo tako, da razložijo, zakaj traja nekoliko dlje.
+   </p>
 
-      <p>That said, <%= site_name %> does show the maximum legal deadline
-        for response on each request. Here's how we calculate it.</p>
+      <p>Ob vsem tem pa je ključno, da <%= site_name %> pri vsaki zahtevi prikazuje največje zakonsko dovoljeno število dni za odziv. Izračunamo ga takole:</p>
 
       <ul>
 
-        <li>If the day we deliver the request by email is a working day, we count that
-          as "day zero", even if it was delivered late in the evening. Days end at
-          midnight.  We then count the next working day as "day one", and so on up to
-          <strong><%= AlaveteliConfiguration::reply_late_after_days %> working days</strong>.</li>
+        <li>Če prošnjo prejmemo na delovni dan, to štejemo kot "dan nič", tudi če smo mail prejeli pozno zvečer. Dnevi se končajo ob polnoči. Naslednji delovni dan štejemo kot "dan ena", in tako naprej, vse do <strong><%= AlaveteliConfiguration::reply_late_after_days %> dvajsetega delovnega dne</strong>.</li>
 
-        <li>If the day the request email was delivered was a non-working day, we count
-          the next working day as "day one". Delivery is delivery, even if it happened on
-          the weekend. Some authorities disagree with this, our lawyer disagrees with them. </li>
+        <li>Če je e-pošta z zahtevo prispela na dan, ki ni delovni, se za "dan ena" šteje naslednji delovni dan. Dostava je dostava, tudi če se zgodi čez vikend.  </li>
 
-        <li>Requesters are encouraged to mark when they have <strong>clarified</strong>
-          their request so the clock resets, but sometimes they get this wrong. If you
-          see a problem with a particular request, let us know and we'll fix it.</li>
+        <li>Prosilce spodbujamo, da označijo, kdaj so <strong>pojasnili</strong>svojo zahtevo, da se štetje ponastavi. Včasih tega sicer ne storijo prav. Če opazite tovrstno težavo, nas lahko obvestite, da jo popravimo.</li>
       </ul>
 
-      <p>The date thus calculated is shown on requests with the text "By law,
-        Liverpool City Council should normally have responded by...".
+      <p>Izračunan datum je prikazan ob zahtevah z besedilom "V skladu z zakonom bi se moral organ odzvati do...".
       </p>
 
     </dd>
 
-    <dt id="large_file">How can I send a large file, which won't go by email?<a href="#large_file">#</a> </dt>
+    <dt id="large_file">Kako lahko pošljem večjo datoteko, ki ne gre v e-poštno sporočilo?<a href="#large_file">#</a> </dt>
 
-    <dd>Instead of email, you can respond to a request directly from your web
-      browser, including uploading a file. To do this, choose "respond to request" at
-      the bottom of the request's page. <a href="<%= help_contact_path %>">Contact us</a> if it
-      is too big for even that (more than, say, 50Mb).
+    <dd>Namesto z e-pošto se lahko na zahtevo odzovete neposredno iz brskalnika in naložite datoteko. Da to storite, izberite "odgovorite na zahtevo" na dnu strani z zahtevo. <a href="<%= help_contact_path %>">Kontaktirajte nas</a>, če je datoteka večja od 50 MB.
     </dd>
 
-    <dt id="names">Why do you publish the names of civil servants and the text of emails? <a href="#names">#</a> </dt>
+    <dt id="names">Zakaj objavljate imena pooblaščenih oseb in besedilo e-poštnih sporočil? <a href="#names">#</a> </dt>
 
-    <dd>We consider what officers or servants do in the course of their employment
-      to be public information. We will only remove content in exceptional
-      circumstances, see our <a href="<%= help_privacy_path(:anchor => 'takedown') %>">take down policy</a>.
+    <dd>Delo pooblaščenih oseb v javnih organih razumemo kot javno informacijo. Vsebino bomo izbrisali le v izjemnih okoliščinah, glej <a href="<%= help_privacy_path(:anchor => 'takedown') %>">pravila izbrisa</a>.
     </dd>
 
-    <dt id="mobiles">Do you publish email addresses or mobile phone numbers? <a href="#mobiles">#</a> </dt>
+    <dt id="mobiles">Ali objavljate e-mail naslove in telefonske številke? <a href="#mobiles">#</a> </dt>
 
-    <dd><p>To prevent spam, we automatically remove most emails and some mobile numbers from
-        responses to requests.  Please <a href="<%= help_contact_path %>">contact us</a> if we've
-        missed one.
-        For technical reasons we don't always remove them from attachments, such as certain PDFs.</p>
-    <p>If you need to know what an address was that we've removed, please <a
-      href="<%= help_contact_path %>">get in touch with us</a>.
+    <dd><p>Iz odgovorov avtomatsko brišemo večino e-mail naslovov in telefonskih številk, da preprečimo nezaželeno pošto. Prosimo, da nas <a href="<%= help_contact_path %>">kontaktirate</a>, če smo kaj spregledali.
+        Iz tehničnih razlogov številk in e-naslovov ne brišemo vedno iz prilog, npr. določenih PDF dokumentov.</p>
+    <p>Če želite izvedeti, kaj smo odstranili, lahko <a
+      href="<%= help_contact_path %>">stopite v kontakt z nami</a>.
       <% if AlaveteliConfiguration::enable_annotations %>
-        Occasionally, an email address forms an important part of a response
-        and we will post it up in an obscured form in an annotation.
-      <% end %>
+        Občasno je e-naslov pomemben del odziva na zahtevo. V teh primerih ga bomo objavili v zakriti obliki s pripisom. <% end %>
     </p>
     </dd>
 
-    <dt id="copyright"><a id="commercial"></a>What is your policy on copyright of documents?<a href="#copyright">#</a> </dt>
+    <dt id="copyright"><a id="commercial"></a>Kakšna je vaša politika glede avtorskih pravic?<a href="#copyright">#</a> </dt>
 
-    <dd>Our Freedom of Information law is "applicant blind", so anyone in the
-      world can request the same document and get a copy of it.
+    <dd> Naš Zakon o dostopu do informacij javnega značaja ne razlikuje med prosilci, zato lahko kdorkoli, od koderkoli na svetu, zahteva isti dokument in dobi njegovo kopijo. 
 
-      If you think our making a document available on the internet infringes your
-      copyright, you may <a href="<%= help_contact_path %>">contact us</a> and ask us
-      to take it down.  However, to save tax payers' money by preventing duplicate
-      requests, and for good public relations, we'd advise you not to do that.
-    </dd>
+      Če menite, da bomo z objavo dokumenta na spletu kršili vaše avtorske pravice, nas lahko <a href="<%= help_contact_path %>">kontaktirate</a> in prosite za odstranitev. Da dodatno ne zapravljamo davkoplačevalskega denarja s podvajanjem zahtev, vas prosimo za tehten razmislek o tovrstni prošnji.  </dd>
 
-    <dt id="allowed_responses">My response to an old request on <%= site_name %> has been bounced!<a href="#allowed_responses">#</a> </dt>
-      <dd>After six months of inactivity, <%= site_name %> limits who can respond to a request to stop
-      spammers targeting old requests. At that point, the request can only be responded to by someone who's
-      from the authority. After twelve months, the request is closed to responses from anyone. If you need an
-      old request to be re-opened so that you can respond to it, please <a href="<%= help_contact_path %>">
-      contact us</a>.
+    <dt id="allowed_responses">Svoj odgovor na staro zahtevo na strani <%= site_name %> sem prejel nazaj!<a href="#allowed_responses">#</a> </dt>
+      <dd>Po šestih mesecih neaktivnosti platforma <%= site_name %> omeji odzive na zahteve, da ustavi vsiljivo internetno pošto. Po poteku tega obdobja lahko na zahtevo odgovori le poobaščena oseba  javnega organa. Po dvanajstih mesecih je zahteva zaprta za vse odzive. Če bi jo želeli ponovno odpreti,se <a href="<%= help_contact_path %>">obrnite na nas</a>.
       </dd>
 
 
   </dl>
 
-  <p><strong>If you haven't already</strong>, read <a href="<%= help_about_path %>">the introduction</a> --&gt;
-    <br><strong>Otherwise</strong>, the <a href="<%= help_credits_path %>">credits</a> or the <a href="<%= help_api_path %>">programmers API</a> --&gt;
+  <p><strong>Če še niste</strong>, preberite zavihek <a href="<%= help_about_path %>">Uvod</a> --&gt;
+    <br><strong>O nas</strong>, <a href="<%= help_credits_path %>"> Zasluge </a> ali pa <a href="<%= help_api_path %>"> Aplikacijski programski vmesnik (API) </a> --&gt;
 
     <div id="hash_link_padding"></div>
 </div>
