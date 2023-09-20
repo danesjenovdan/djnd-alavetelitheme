@@ -943,3 +943,8 @@ dt {
 .pro-pill {
   background-color: desaturate(darken($color_secondary, 10%), 5%);
 }
+
+// All titles should be in a different font
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Alegreya Sans", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;z
+}

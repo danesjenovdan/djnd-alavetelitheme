@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;700&display=swap');
+
 $main_menu-mobile_menu_cutoff: 58em;
 $row-width: 64em;
-$body-font-family: "Helvetica Neue", Arial, Helvetica, Helmet, Freesans, sans-serif;
+$body-font-family: "Quicksand", "Alegreya Sans", "Helvetica Neue", Arial, Helvetica, Helmet, Freesans, sans-serif;
 $base-font-size: 16px;
 
 // Specify the filename and dimensions of your logo file here
@@ -9,14 +11,14 @@ $logo-highdpi-filename: 'logo@2.png'; //Should be at least 2x the size, in the s
 $logo-width: 275px;
 $logo-height: 44px;
 
-$color_sand: #f3f1eb;
+$color_sand: #D2D2D2;
 $color_black: #333333;
 $color_orange: #f4a140;
 $color_blue: #4faded;
 $color_green: #62b356;
 $color_yellow: #ffd836;
 $color_red: #e04b4b;
-$color_violet: #a94ca6;
+$color_violet: #9D5BD7;
 $color_purple: #5c377f;
 $color_white: #ffffff;
 $color_off_white: #f3f1eb;
@@ -34,7 +36,7 @@ $body-bg: $color_neutral_light;
 $body-font-color: $color_neutral_dark;
 $link-color: darken($color_blue, 20%);
 $action-color: $color_green;
-$font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: "Quicksand", "Alegreya Sans", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $form_input-bg: $color_white;
 $form-label-font-color: $color_black;
 
@@ -50,4 +52,4 @@ $error-color: $color_red;
 $action-color: $color_orange;
 
 $banner_inner_bg: $color_primary;
-$topnav_bg: darken($color_primary, 10%);
+$topnav_bg: #834AD1;
